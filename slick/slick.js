@@ -3034,4 +3034,9 @@
         return _;
     };
 
+    return function () {
+        var args = Array.prototype.slice.call(arguments);
+        $.fn.slick.apply(args[0], args.slice(1));
+    };
+
 }));
